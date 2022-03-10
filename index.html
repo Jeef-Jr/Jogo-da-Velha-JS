@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Jogo</title>
+</head>
+<body id="background">
+
+        <h1 class="title">Jogo da Velha</h1>
+
+        <div class="corpo">
+            <div class="card_jogo">
+                <div class="menu">
+                   <div>
+                       <button onclick="reiniciar()" class="btns color_yellow">Reiniciar</button>
+                   </div>
+                </div>    
+                <div class="corpo_jogo">  
+                    
+                    <div class="campo_jogo">
+                        <h4>Jogando com : <span class="xo"></span></h4>
+                        <div class="row">
+                            <button style="border-right: 1px solid black !important; border-bottom: 1px solid black;" onclick="registrarXO('n1')" class="button_jogo" id="n1"></button>
+                            <button style="border-bottom: 1px solid black !important; border-right: 1px solid black;" onclick="registrarXO('n2')" class="button_jogo" id="n2"></button>
+                            <button style="border-bottom: 1px solid black !important;" onclick="registrarXO('n3')" class="button_jogo" id="n3"></button>
+                        </div>
+                        <div class="row">
+                            <button style="border-bottom: 1px solid black !important; border-right: 1px solid black;" onclick="registrarXO('n4')" class="button_jogo" id="n4"></button>
+                            <button style="border-bottom: 1px solid black !important; border-right: 1px solid black;" onclick="registrarXO('n5')" class="button_jogo" id="n5"></button>
+                            <button style="border-bottom: 1px solid black !important;" onclick="registrarXO('n6')" class="button_jogo" id="n6"></button>
+                        </div>
+                        <div class="row">
+                            <button style="border-right: 1px solid black;" onclick="registrarXO('n7')" class="button_jogo" id="n7"></button>
+                            <button style=" border-right: 1px solid black;" onclick="registrarXO('n8')" class="button_jogo" id="n8"></button>
+                            <button onclick="registrarXO('n9')" class="button_jogo" id="n9"></button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+         </div>
+    
+</body>
+</html>
+
+<script src="./script.js"></script>

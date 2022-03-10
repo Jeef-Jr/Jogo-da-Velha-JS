@@ -1,0 +1,89 @@
+
+#background {
+    
+    background-color: #023e8a;
+    height: 100vh;
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.card_jogo {
+    border-radius: 10px;
+    background-color: white;
+    height: 400px;
+    width: 600px;
+}
+
+.corpo {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 40px;
+}
+
+.corpo_jogo {
+    display: flex;
+    justify-content: center;
+    height: 360px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.btns {
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    margin-top: 10px;
+    width: 200px;
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.color_blue {
+    background-color: #03045e;
+    color: white;
+    transition: 0.2s;
+}
+
+.color_blue:hover {
+    background-color: #2b2da7;
+}
+
+.color_yellow {
+    background-color: #ee9b00;
+    color: white;
+    transition: 0.2s;
+}
+
+.color_yellow:hover {
+    background-color: #eeb74f;
+}
+
+.campo_jogo {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 40px;
+}
+
+.button_jogo {
+    font-size: 25px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}

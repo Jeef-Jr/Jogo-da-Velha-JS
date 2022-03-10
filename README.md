@@ -1,2 +1,5 @@
-# Jogo_da_Velha-JS
+# Jogo-da-Velha-JS
 Este projeto é institucional
+
+# Desenvolvimento
+Aula de algoritmo.
