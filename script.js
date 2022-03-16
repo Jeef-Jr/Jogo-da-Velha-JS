@@ -1,6 +1,14 @@
 
 
 let number = 1;
+
+let Xganhou = 0;
+let Oganhou = 0;
+
+let XganhouInner =  document.getElementById("gX");
+let OganhouInner =  document.getElementById("gO");
+
+
 let information = document.querySelector(".xo");
 let n1 = document.getElementById("n1");
 let n2 = document.getElementById("n2");
@@ -17,11 +25,8 @@ function registrarXO (n){
 
     if(number === 1){
         var xo = 'X'
-        number = 0;
     }else if(number === 0) {
         var xo = 'O'
-        number = 1;
-        
     }
 
     switch(n){
@@ -65,11 +70,23 @@ function setStates(n, xo){
 
     if(n.innerHTML == "X"){
         console.log("campo já selecionado")
+        number = 0;
     }else if(n.innerHTML == "O"){
         console.log("campo já selecionado")
-    }else {
+        number = 1;
+    }else if(n.innerHTML != "X" && n.innerHTML != "O") {
         n.innerHTML = xo;
         information.innerHTML = xo;
+
+        if(n.innerHTML == "X"){
+            number = 0
+        }else {
+            number = 1;
+        }
+
+        setTimeout(() => {
+            regraDeNegocio();
+        }, 200);
     }
 
 }
@@ -77,12 +94,76 @@ function setStates(n, xo){
 
 function regraDeNegocio(){
 
-    if(n1.innerHTML == "X" || n2.innerHTML == "X" || n3.innerHTML == "X"){
+    const x = "X";
+    const o = "O";
 
-    }else if(n1.innerHTML == "X" || n4.innerHTML == "X" || n7.innerHTML == "X"){
+    if(n1.innerHTML == "X" && n2.innerHTML == "X" && n3.innerHTML == "X"){
+        console.log("Entrou 1");
+       notify(x);
+    }else if(n1.innerHTML == "X" && n4.innerHTML == "X" && n7.innerHTML == "X"){
+        console.log("Entrou 2");
+        notify(x);
+    }else if(n1.innerHTML == "X" && n5.innerHTML == "X" && n9.innerHTML == "X") {
+        console.log("Entrou 3");
+        notify(x);
+    }else if(n2.innerHTML == "X" && n5.innerHTML == "X" && n8.innerHTML == "X"){
+        console.log("Entrou 4");
+        notify(x);
+    }else if(n3.innerHTML == "X" && n6.innerHTML == "X" && n9.innerHTML == "X"){
+        console.log("Entrou 5");
+        notify(x);
+    }else if(n7.innerHTML == "X" && n8.innerHTML == "X" && n9.innerHTML == "X"){
+        console.log("Entrou 6");
+        notify(x);
+    }else if(n4.innerHTML == "X" && n5.innerHTML == "X" && n6.innerHTML == "X"){
+        console.log("Entrou 7");
+        notify(x);
+    }else if(n3.innerHTML == "X" && n5.innerHTML == "X" && n7.innerHTML == "X"){
+        console.log("Entrou 8");
+        notify(x);
+    }else if(n1.innerHTML == "O" && n2.innerHTML == "O" && n3.innerHTML == "O") {
+        console.log("Entrou 9");
+        notify(o);
+    }else if(n1.innerHTML == "O" && n4.innerHTML == "O" && n7.innerHTML == "O"){
+        console.log("Entrou 10");
+        notify(o);
+    }else if(n1.innerHTML == "O" && n5.innerHTML == "O" && n9.innerHTML == "O") {
+        console.log("Entrou 11");
+        notify(o);
+    }else if(n2.innerHTML == "O" && n5.innerHTML == "O" && n8.innerHTML == "O"){
+        console.log("Entrou 12");
+        notify(o);
+    }else if(n3.innerHTML == "O" && n6.innerHTML == "O" && n9.innerHTML == "O"){
+        console.log("Entrou 13");
+        notify(o);
+    }else if(n9.innerHTML == "O" && n8.innerHTML == "O" && n9.innerHTML == "O"){
+        console.log("Entrou 14");
+        notify(o);
+    }else if(n4.innerHTML == "O" && n5.innerHTML == "O" && n6.innerHTML == "O"){
+        console.log("Entrou 15");
+        notify(o);
+    }else if(n3.innerHTML == "O" && n5.innerHTML == "O" && n7.innerHTML == "O"){
+        console.log("Entrou 16");
+        notify(o);
+    }
+}
 
-    }else if(n1.innerHTML == "X" || n5.innerHTML == "X" || n9.innerHTML == "X") {
+function notify(xo){
 
+    swal(`( ${xo} ) Ganhou!!`, "Vamos jogar novamente?", "success");
+    XOResultado(xo);
+    reiniciar();
+}
+
+function XOResultado(xo){
+
+    if(xo == "X"){
+        Xganhou += + 1;
+       XganhouInner.innerHTML = Xganhou;
+
+    }else {
+        Oganhou += + 1;
+        OganhouInner.innerHTML = Oganhou;
     }
 
 }
@@ -98,4 +179,13 @@ function reiniciar () {
     n7.innerHTML = ''
     n8.innerHTML = ''
     n9.innerHTML = ''
+
+}
+
+function zerarPontuacao(){
+    Xganhou = 0;
+    Oganhou = 0;
+
+    OganhouInner.innerHTML = Oganhou;
+    XganhouInner.innerHTML = Xganhou;
 }

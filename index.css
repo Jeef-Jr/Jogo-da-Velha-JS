@@ -12,10 +12,17 @@
     color: white;
 }
 
+.resultados {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center; 
+    color:white; 
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .card_jogo {
     border-radius: 10px;
     background-color: white;
-    height: 400px;
     width: 600px;
 }
 

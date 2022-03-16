@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Jogo</title>
 </head>
 <body id="background">
 
         <h1 class="title">Jogo da Velha</h1>
-
+        <div class="resultados">
+            <span>Ganhos:</span>
+            <span>X : <span id="gX">0</span> | O : <span id="gO">0</span> </span>
+        </div>
         <div class="corpo">
             <div class="card_jogo">
+                
+
                 <div class="menu">
                    <div>
                        <button onclick="reiniciar()" class="btns color_yellow">Reiniciar</button>
+                       <button onclick="zerarPontuacao()" class="btns color_blue">Zerar Pontuação</button>
                    </div>
                 </div>    
                 <div class="corpo_jogo">  
